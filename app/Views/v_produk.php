@@ -168,8 +168,8 @@
                     success: function(hasil) {
                         if (hasil.status === 'success') {
                             Swal.fire({
-                                title: "Good job!",
-                                text: "You clicked the button!",
+                                title: "Success",
+                                text: "Data berhasil di simpan",
                                 icon: "success"
                                 });
                             $('#modalTambahProduk').modal("hide");
