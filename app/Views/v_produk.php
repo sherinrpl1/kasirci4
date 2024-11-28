@@ -47,27 +47,27 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <from id="fromProduk">
+                <form id="formProduk">
                     <div class="row mb-3">
-                        <label for="namaProduk" class="col-sm-4 col-from-tabel"> Nama Produk </label>
+                        <label for="namaProduk" class="col-sm-4 col-form-tabel"> Nama Produk </label>
                         <div class="col-sm-8"> 
-                            <input type="text" class="from-control" id="namaProduk" name="namaProduk">
+                            <input type="text" class="form-control" id="namaProduk" name="namaProduk">
                         </div>
                     </div>
                     <div class="row nb-3"> 
                         <label form="hargaProduk" class="col-sm-4 col-form-label">Harga</label>
                         <div class="col-sm-8">
-                            <input type="number" step="0.01" class="from-control" id="hargaProduk">
+                            <input type="number" step="0.01" class="form-control" id="hargaProduk">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="stokProduk" class="col-sm-4 col-from-label">Stok</label>
+                        <label for="stokProduk" class="col-sm-4 col-form-label">Stok</label>
                         <div class="col-sm-8">
-                            <input type="number" class="from-control" id="stokProduk">
+                            <input type="number" class="form-control" id="stokProduk">
                         </div>
                     </div>
                     <button type="button" id="simpanProduk" class="btn btn-primary float-end">Simpan</button>
-                </from>
+                </form>
             </div>
         </div>
     </div>
@@ -188,8 +188,14 @@
             // Event handler untuk tombol hapus
             $(document).on('click', '.btn-hapus', function() {
                 var row = $(this).closest('tr');
-                document.get
+                // document.get
                 var id = $(this).data('id');
+
+                if (id <= 0) {
+                    alert("ID produk tidak valid.");
+                    return;
+                }
+                
                 if (confirm("Apakah Anda yakin ingin menghapus produk ini?")) {
                     $.ajax({
                         url: '<?= base_url('produk/hapus/') ?>' + id,
