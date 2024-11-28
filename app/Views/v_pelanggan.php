@@ -48,7 +48,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="fromPelanggan">
+                        <form id="formPelanggan">
                             <div class="row mb-3">
                                 <label for="namaPelanggan" class="col-sm-4 col-form-label">Nama Pelanggan</label>
                                 <div class="col-sm-8">
@@ -84,9 +84,9 @@
                     </div>
                     <div class="modal-body">
                         <form id="formEditPelanggan">
-                            <input type="hidden" id="pelanganIdEdit" name="pelangganIdEdit">
+                            <input type="hidden" id="pelangganIdEdit" name="pelangganIdEdit">
                             <div class="row mb-3">
-                                <label for="namaPelanggaEdit" class="col-sm-4 col-form-label">Nama Pelanggan</label>
+                                <label for="namaPelangganEdit" class="col-sm-4 col-form-label">Nama Pelanggan</label>
                                 <div class="col-sm-8">
                                     <input type="text" class="form-control" id="namaPelangganEdit" name="namaPelangganEdit">
                                 </div>
@@ -172,7 +172,7 @@
                                 icon: "success"
                             });
                             $('#modalTambahPelanggan').modal("hide");
-                            $('#fromPelanggan')[0].reset();
+                            $('#formPelanggan')[0].reset();
                             tampilPelanggan();
                         } else {
                             alert('Gagal menyimpan data: ' + JSON.stringify(hasil.errors));
@@ -244,7 +244,7 @@
 
             $('#editPelanggan').on('click', function(){
                 var formData = {
-                    id_pelanggan: $('#pelanganIdEdit').val(),
+                    id_pelanggan: $('#pelangganIdEdit').val(),
                     nama_pelanggan: $('#namaPelangganEdit').val(),
                     alamat: $('#alamatPelangganEdit').val(),
                     no_tlp: $('#telponPelangganEdit').val(),
