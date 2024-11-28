@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Controllers;
-  use App\Controllers\BaseController;
-use App\Models\PelangganModel; // Menambahkan model PelangganModel
+
+use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\PelangganModel;
 
 class Pelanggan extends BaseController
 {
@@ -132,7 +133,7 @@ class Pelanggan extends BaseController
         if ($pelanggan) {
             return $this->response->setJSON([
                 'status' => 'success',
-                'pelanggan' => $pelanggan,
+                'pelanggan' => $pelanggan
             ]);
         } else {
             return $this->response->setJSON(['status' => 'error']);
