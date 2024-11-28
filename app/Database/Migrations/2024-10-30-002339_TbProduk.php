@@ -11,21 +11,21 @@ class TbProduk extends Migration
         $this->forge->addField ([
             'produk_id' => [
                 'type'             =>'INT',
-                'constraint'       => '11',
-                'usigned'          => 'TRUE',
-               'auto_increment'    => 'TRUE',
+                'constraint'       => 11,
+                'usigned'          => TRUE,
+               'auto_increment'    => TRUE,
              ],
              'nama_produk' => [
                     'type' => 'VARCHAR',
-                    'constraint' => '255',
+                    'constraint' => 255,
              ],
              'harga' => [
                 'type' => 'DECIMAL',
-                'constrain' => '10,2',
+                'constraint' => 10,2,
              ],
              'stok' => [
                 'type' => 'INT',
-                'constrain' => '11',
+                'constraint' => 11,
              ],
             ]);
              $this->forge->addKey('produk_id', TRUE);
