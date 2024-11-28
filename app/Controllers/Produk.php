@@ -3,8 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\ProdukModel;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\ProdukModel;
 
 class Produk extends BaseController
 {
