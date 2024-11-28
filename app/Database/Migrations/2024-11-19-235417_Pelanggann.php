@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Pelanggann extends Migration
+class Pelanggan extends Migration
 {
     public function up()
     {
@@ -17,11 +17,11 @@ class Pelanggann extends Migration
             ],
             'nama_pelanggan' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 255,
             ],
             'alamat' => [
                 'type' => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 255,
             ],
             'no_tlp' => [
                 'type' => 'INT',
